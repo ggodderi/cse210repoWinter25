@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-class Program
+class Program 
 {
     static void Main(string[] args)
     {
@@ -10,7 +10,7 @@ class Program
         Console.WriteLine("Please enter your name: ");
         string name = Console.ReadLine();
         Console.WriteLine($"{name}");
-        Console.WriteLine("jlkasdfl");
-        // asdfasdf
+        Console.WriteLine("jlkasdfl");  
+        // asdf;lkjasdf;ljkl;kajsdf
     }
 }
