@@ -1,16 +1,31 @@
 using System;
-using System.Diagnostics.CodeAnalysis;
+
 
 class Program 
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Bob's World!");
-        Console.WriteLine("Hello CSE 210");
-        Console.WriteLine("Please enter your name: ");
-        string name = Console.ReadLine();
-        Console.WriteLine($"{name}");
-        Console.WriteLine("jlkasdfl");  
-        // asdf;lkjasdf;ljkl;kajsdf
+        Console.WriteLine("Hello Today - March 3, 2025");
+
+        // double x = 10;
+        Circle myCircle = new Circle(10);
+        myCircle.DisplayCircleArea();       
+        Cylinder myCylinder = new Cylinder(10, myCircle);
+        double volume = myCylinder.GetVolume();
+        Console.WriteLine($"The cylinder volume is: {volume}");
+  
+  
+  
+        // Circle myCircle2 = new Circle(20);
+        // myCircle2.DisplayCircleArea();
+
+        // for(int i = 0; i < 30; i++)
+        // {
+        //     myCircle.SetRadius(i);
+        //     double circleArea = myCircle.GetArea();
+        //     Console.WriteLine($"{i}: Circle area is: {circleArea}");
+
+        //     // myCircle.DisplayCircleArea();
+        // }
     }
 }

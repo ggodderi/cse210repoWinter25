@@ -1,0 +1,149 @@
+using System;
+using System.Runtime.CompilerServices;
+
+
+class Circle
+{
+    private double radius;
+    public Circle()
+    {
+        radius = 0.0;
+    }
+
+    public double GetArea()
+    {
+        return Math.PI * radius * radius;
+    }
+
+    public void SetRadius(double r)
+    {
+        radius = r;
+    }
+
+}
+
+class Cylinder
+{
+    private double height;
+    Circle circle;
+
+    public Cylinder(double h, Circle c)
+    {
+        height = h;
+        circle = c;
+    }
+
+    public double GetVolume()
+    {
+        return height * circle.GetArea();
+    }
+}
+class Program 
+{
+    public static int AddNumbers(int x, int y)
+    {
+        return x + y;
+    }
+    static void Main(string[] args)
+    {
+        // Console.WriteLine("Hello Bob's World!");
+        // Console.WriteLine("Hello CSE 210");
+        // Console.WriteLine("Please enter your name: ");
+        // string name = Console.ReadLine();
+        // Console.WriteLine($"{name}");
+        // Console.WriteLine("jlkasdfl");  
+        // // asdf;lkjasdf;ljkl;kajsdf
+
+        // int x = 10;
+
+        // if(x != 10 && x != 20 || x != 20 && x != 30)
+        // {
+        //     Console.WriteLine("X is not 10");
+        // }
+        // else if (x == 10)
+        //     Console.WriteLine("In the else statement");
+        // else 
+        //     Console.WriteLine("In the else block");
+
+        // int x = 10;
+        // int y = ++x;
+        // int z = y;
+
+        // Console.WriteLine($"{x}, {y}, {z}");
+        
+        // ++ and --
+
+        // For loop
+        // for(float i = 3000.234F; i > 200.234; i -= 100.234235F)
+        // {
+        //     Console.WriteLine($"{i}: Bob");
+        // }
+
+        // List and string[]
+        // List<int> numbers = new List<int>{1, 2, 3, 4, 5, 6, 7, 8};
+        // numbers.Add(10);
+
+        // // Foreach loop
+        // foreach(int x in numbers)
+        // {
+        //     Console.WriteLine($"{x}");
+        // }
+
+        // // while loop
+
+        // bool correctInput = false;
+        // while(!correctInput)
+        // {
+        //     Console.Write("Please input your age: ");
+        //     int age = int.Parse(Console.ReadLine());
+        //     if (age >= 0 && age < 120)
+        //     {
+        //         Console.WriteLine($"Your age is: {age}");
+        //         correctInput = true;
+        //     }
+        // }
+
+        // bool correctInput;
+        // do
+        // {
+        //     Console.Write("Please input your age: ");
+        //     int age = int.Parse(Console.ReadLine());
+        //     if (age >= 0 && age < 120)
+        //     {
+        //         Console.WriteLine($"Your age is: {age}");
+        //         correctInput = true;
+        //     }
+        //     else
+        //         correctInput = false;
+        // } while(!correctInput);
+
+        // do while loop
+
+        // random
+
+        // Random newRandomNumber = new Random();
+        // for(int i = 0; i < 100; i++)
+        // {
+        //     int number =  newRandomNumber.Next(1, 1000);
+        //     Console.WriteLine($"{i}: {number}");
+        // }
+        // Function call.
+
+        // int total = AddNumbers(100, 200);
+        // Console.WriteLine($"{total}");
+
+        Circle myCircle = new Circle();
+        myCircle.SetRadius(11);
+        Console.WriteLine(myCircle.GetArea());
+
+        for(int i = 0; i <= 10; i++)
+        {
+            myCircle.SetRadius(i);
+            Console.WriteLine(myCircle.GetArea());
+        }
+        
+        Cylinder cylinder= new Cylinder(10, myCircle);
+        Console.WriteLine(cylinder.GetVolume());
+        
+    }
+}
